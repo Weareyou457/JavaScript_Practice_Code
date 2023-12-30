@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React{
+        constructor(){
+            this.library="react"
+            this.server="https://localhost:2000"
+
+            //requirment
+
+            // document.querySelector('button').addEventListener('click',this.handleClick)
+
+            document.querySelector('button').addEventListener('click',this.handleClick.bind(this)) //bind extra likha to vo server this. wala acees akerga otherwise undefined ayega 
+        }
+
+        handleClick(){
+            console.log("button clicked");
+            console.log(this.server);
+        }
+    }
+
+    const app = new React()
+
+
+</script>
+</html>

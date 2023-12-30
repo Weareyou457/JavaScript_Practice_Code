@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>chai or code </h1>
+    <button id="stop"> Stop</button>
+</body>
+<script>
+    // setTimeout(function () {
+    //     console.log("hiteesh");  
+    // },2000)   // 2 sec ke bad ayega
+
+
+    const sayhitesh = function () {
+        console.log("hitesh");
+    }
+
+    const changetext = function () {
+        document.querySelector('h1').innerHTML = "best js series"
+    }
+
+    setTimeout(sayhitesh, 1000)
+   const changeMe = setTimeout(changetext, 3000)
+
+
+    //Rukhna bhi chiye TImeOut
+
+    // clearTimeout(changeMe) // isko refernce lena padega nononono
+
+    document.querySelector("#stop").addEventListener('click',function(e){
+        clearTimeout(changeMe);
+        console.log("Stopped");
+    })
+
+
+</script>
+
+</html>
